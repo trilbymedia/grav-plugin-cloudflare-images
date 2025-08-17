@@ -1,0 +1,30 @@
+{
+    "name": "grav-plugin/cloudflare-images",
+    "type": "grav-plugin",
+    "description": "Cloudflare Images Plugin for Grav CMS",
+    "keywords": ["grav", "plugin", "cloudflare", "images", "cdn", "optimization"],
+    "homepage": "https://github.com/trilbymedia/grav-plugin-cloudflare-images",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trilby Media",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grav\\Plugin\\CloudflareImages\\": "classes/"
+        },
+        "classmap": [
+            "cloudflare-images.php"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.6"
+        }
+    }
+}

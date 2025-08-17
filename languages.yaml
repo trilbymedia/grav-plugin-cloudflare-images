@@ -1,0 +1,18 @@
+en:
+  PLUGIN_CLOUDFLARE_IMAGES:
+    PLUGIN_STATUS: Plugin Status
+    SETTINGS: Cloudflare Settings
+    CLOUDFLARE_DOMAINS: Cloudflare-Enabled Domains
+    CLOUDFLARE_DOMAINS_HELP: List of domains that have Cloudflare enabled. The plugin will automatically detect if the current domain matches and enable Cloudflare transformations.
+    DEFAULTS: Default Settings
+    DEFAULT_QUALITY: Default Image Quality
+    DEFAULT_QUALITY_HELP: Default quality for images (1-100, higher is better quality but larger file size)
+    DEFAULT_FORMAT: Default Image Format
+    DEFAULT_FORMAT_HELP: Default output format for images. Auto lets the browser decide the best format
+    DEFAULT_FIT: Default Fit Mode
+    DEFAULT_FIT_HELP: How images should be resized to fit the specified dimensions
+    ADVANCED: Advanced Settings
+    LOCAL_DOMAINS: Local Development Domains
+    LOCAL_DOMAINS_HELP: Additional domains to treat as local development (Grav Media will be used instead of Cloudflare)
+    FORCE_CLOUDFLARE: Force Cloudflare
+    FORCE_CLOUDFLARE_HELP: Force Cloudflare transformations even on local domains (useful for testing)

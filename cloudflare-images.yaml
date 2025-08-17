@@ -1,0 +1,12 @@
+enabled: true
+cloudflare_domains:                 # List of domains with Cloudflare enabled
+  - example.com
+  - staging.example.com
+default_quality: 85                 # Default image quality (1-100)
+default_format: auto                # Default format: auto|webp|avif|json
+default_fit: cover                  # Default fit: scale-down|contain|cover|crop|pad
+local_domains:                      # Additional domains to treat as local
+  - localhost
+  - 127.0.0.1
+  - '::1'
+force_cloudflare: false             # Force Cloudflare even on local domains (for testing)

@@ -1,0 +1,106 @@
+name: Cloudflare Images
+slug: cloudflare-images
+type: plugin
+version: 1.0.0
+description: Provides Cloudflare image transformation with automatic fallback to Grav's Media handling
+icon: image
+author:
+  name: Trilby Media, LLC
+  email: hello@trilby.media
+homepage: https://github.com/trilbymedia/grav-plugin-cloudflare-images
+keywords: grav, plugin, cloudflare, images, cdn, optimization, responsive
+bugs: https://github.com/trilbymedia/grav-plugin-cloudflare-images/issues
+docs: https://github.com/trilbymedia/grav-plugin-cloudflare-images/blob/main/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_CLOUDFLARE_IMAGES.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    settings_section:
+      type: section
+      title: PLUGIN_CLOUDFLARE_IMAGES.SETTINGS
+      underline: true
+
+    cloudflare_domains:
+      type: selectize
+      label: PLUGIN_CLOUDFLARE_IMAGES.CLOUDFLARE_DOMAINS
+      help: PLUGIN_CLOUDFLARE_IMAGES.CLOUDFLARE_DOMAINS_HELP
+      placeholder: example.com
+      validate:
+        type: commalist
+
+    defaults_section:
+      type: section
+      title: PLUGIN_CLOUDFLARE_IMAGES.DEFAULTS
+      underline: true
+
+    default_quality:
+      type: number
+      label: PLUGIN_CLOUDFLARE_IMAGES.DEFAULT_QUALITY
+      help: PLUGIN_CLOUDFLARE_IMAGES.DEFAULT_QUALITY_HELP
+      default: 85
+      validate:
+        min: 1
+        max: 100
+        type: int
+
+    default_format:
+      type: select
+      label: PLUGIN_CLOUDFLARE_IMAGES.DEFAULT_FORMAT
+      help: PLUGIN_CLOUDFLARE_IMAGES.DEFAULT_FORMAT_HELP
+      default: auto
+      options:
+        auto: Auto (Browser decides)
+        webp: WebP
+        avif: AVIF
+        json: JSON
+
+    default_fit:
+      type: select
+      label: PLUGIN_CLOUDFLARE_IMAGES.DEFAULT_FIT
+      help: PLUGIN_CLOUDFLARE_IMAGES.DEFAULT_FIT_HELP
+      default: scale-down
+      options:
+        scale-down: Scale Down
+        contain: Contain
+        cover: Cover
+        crop: Crop
+        pad: Pad
+
+    advanced_section:
+      type: section
+      title: PLUGIN_CLOUDFLARE_IMAGES.ADVANCED
+      underline: true
+
+    local_domains:
+      type: array
+      label: PLUGIN_CLOUDFLARE_IMAGES.LOCAL_DOMAINS
+      help: PLUGIN_CLOUDFLARE_IMAGES.LOCAL_DOMAINS_HELP
+      value_only: true
+      placeholder_value: localhost
+
+    force_cloudflare:
+      type: toggle
+      label: PLUGIN_CLOUDFLARE_IMAGES.FORCE_CLOUDFLARE
+      help: PLUGIN_CLOUDFLARE_IMAGES.FORCE_CLOUDFLARE_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
