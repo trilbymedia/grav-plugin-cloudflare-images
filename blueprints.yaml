@@ -1,7 +1,7 @@
 name: Cloudflare Images
 slug: cloudflare-images
 type: plugin
-version: 1.0.0
+version: 1.0.1
 description: Provides Cloudflare image transformation with automatic fallback to Grav's Media handling
 icon: image
 author:
@@ -12,6 +12,9 @@ keywords: grav, plugin, cloudflare, images, cdn, optimization, responsive
 bugs: https://github.com/trilbymedia/grav-plugin-cloudflare-images/issues
 docs: https://github.com/trilbymedia/grav-plugin-cloudflare-images/blob/main/README.md
 license: MIT
+
+compatibility:
+  grav: ['1.7', '2.0']
 
 dependencies:
   - { name: grav, version: '>=1.7.0' }
